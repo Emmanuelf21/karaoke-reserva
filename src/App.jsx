@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import { IoMicOutline } from "react-icons/io5";
+import { HiOutlineMusicNote } from "react-icons/hi";
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main className='container-app'>
+        <section className='banner'>
+            <img src="/assets/karaoke-hero.jpg" alt="" />
+            <div className='banner-info'>
+              <h1><HiOutlineMusicNote />Karaoke Jam</h1>
+              <p>Reserve sua sala de Karaokê dos sonhos e cante como uma estrela</p>
+              <div className='btns-banner'>
+                <a href="#">
+                  <IoMicOutline/>
+                  Começar agora
+                </a>
+                {/* trocar para NavLink quando tiver a pagina de salas e login,
+                redireciona para login se não estiver logado, vai para as salas se estiver logado */}
+                <button className='link'>Ver Salas</button>
+              </div>
+            </div>
+        </section>
+      </main>
     </>
   )
 }
