@@ -7,6 +7,7 @@ import { FaRegClock } from "react-icons/fa";
 
 import Card from './components/Card';
 import { NavLink } from 'react-router-dom';
+import Footer from './components/Footer';
 function App() {
   const card1 = {
     'icone': <CiStar />,
@@ -69,6 +70,7 @@ function App() {
           </NavLink>
         </section>
       </main>
+      <Footer/>
     </>
   )
 }
