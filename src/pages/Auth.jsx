@@ -1,13 +1,14 @@
 // import { useState } from 'react';
 // import { Navigate } from 'react-router-dom';
 // import { useAuth } from '@/hooks/useAuth';
-// import { Button } from '@/components/ui/button';
-// import { Input } from '@/components/ui/input';
-// import { Label } from '@/components/ui/label';
-// import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Cards, CardsContent, CardsHeader, CardsTitle } from '@/components/ui/cards';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 // import { Mic, Music } from 'lucide-react';
-// import heroImage from '@/assets/karaoke-hero.jpg';
+import heroImage from '@/assets/karaoke-hero.jpg';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
@@ -68,11 +69,11 @@ const Auth = () => {
             </p>
           </div>
 
-          <Card className="shadow-card bg-gradient-card">
-            <CardHeader>
-              <CardTitle className="text-center text-foreground">Acesso</CardTitle>
-            </CardHeader>
-            <CardContent>
+          <Cards className="shadow-card bg-gradient-card">
+            <CardsHeader>
+              <CardsTitle className="text-center text-foreground">Acesso</CardsTitle>
+            </CardsHeader>
+            <CardsContent>
               <Tabs defaultValue="signin" className="w-full">
                 <TabsList className="grid w-full grid-cols-2">
                   <TabsTrigger value="signin">Entrar</TabsTrigger>
@@ -161,8 +162,8 @@ const Auth = () => {
                   </form>
                 </TabsContent>
               </Tabs>
-            </CardContent>
-          </Card>
+            </CardsContent>
+          </Cards>
 
           <p className="text-center text-sm text-muted-foreground">
             Ao continuar, você concorda com nossos termos de uso e política de privacidade
