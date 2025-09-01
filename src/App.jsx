@@ -2,6 +2,9 @@ import './App.css'
 import { IoMicOutline } from "react-icons/io5";
 import { HiOutlineMusicNote } from "react-icons/hi";
 import { CiStar } from "react-icons/ci";
+import { RiGroupLine } from "react-icons/ri";
+import { FaRegClock } from "react-icons/fa";
+
 import Card from './components/Card';
 function App() {
   const card1 = {
@@ -10,6 +13,21 @@ function App() {
     'descricao': 'Ambientes luxuosos com iluminação LED e decoração temática',
     'sobre': ['Sistema de som profissional', 'Iluminação disco e neon', 'Serviço de bar incluso', 'Máquina de fumaça']
   }
+
+  const card2 = {
+    'icone': <RiGroupLine />,
+    'titulo': 'Para Todos os Grupos',
+    'descricao': 'Salas de diferentes tamanhos para qualquer ocasião',
+    'sobre': ['Salas privadas (2-8 pessoas)', 'Salas familiares (8-12 pessoas)', 'Salas para festas (8-15 pessoas)', 'Palco principal (15+ pessoas)']
+  }
+
+  const card3 = {
+    'icone': <FaRegClock />,
+    'titulo': 'Reserva Fácil',
+    'descricao': 'Sistema online simples e seguro para suas reservas',
+    'sobre': ['Reserva imediata online', 'Pagamento seguro', 'Cancelamento flexível', 'Suporte 24/7']
+  }
+
   return (
     <>
       <main className='container-app'>
@@ -37,7 +55,14 @@ function App() {
           </div>
           <div className='cards'>
               <Card infos={card1}/>
+              <Card infos={card2}/>
+              <Card infos={card3}/>
           </div>
+        </section>
+        <section className='container-confirm'>
+                  <h2>Pronto para brilhar no palco?</h2>
+                  <p>Crie sua conta e reserve sua primeira sala em minutos</p>
+                  
         </section>
       </main>
     </>
