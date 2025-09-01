@@ -108,4 +108,9 @@
 
 .container-info .cards{
   margin-top: 3rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
 }

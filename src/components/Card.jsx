@@ -6,13 +6,15 @@ const Card = ({infos}) => {
         {infos.icone}
         <h2>{infos.titulo}</h2>
         <p>{infos.descricao}</p>
-        <ul>
-            {
-              infos.sobre.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))
-            }
-        </ul>
+        <div className='lista'>
+          <ul>
+              {
+                infos.sobre.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))
+              }
+          </ul>
+        </div>
     </div>
   )
 }
