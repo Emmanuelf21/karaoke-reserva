@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Mic, Music } from 'lucide-react';
-import heroImage from '@/assets/karaoke-hero.jpg';
+// import { useState } from 'react';
+// import { Navigate } from 'react-router-dom';
+// import { useAuth } from '@/hooks/useAuth';
+// import { Button } from '@/components/ui/button';
+// import { Input } from '@/components/ui/input';
+// import { Label } from '@/components/ui/label';
+// import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+// import { Mic, Music } from 'lucide-react';
+// import heroImage from '@/assets/karaoke-hero.jpg';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
