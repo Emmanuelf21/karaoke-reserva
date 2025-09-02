@@ -6,6 +6,8 @@ import { RiGroupLine } from "react-icons/ri";
 import { FaRegClock } from "react-icons/fa";
 
 import Card from './components/Card';
+import { NavLink } from 'react-router-dom';
+import Footer from './components/Footer';
 function App() {
   const card1 = {
     'icone': <CiStar />,
@@ -32,39 +34,43 @@ function App() {
     <>
       <main className='container-app'>
         <section className='banner'>
-            <img src="/assets/karaoke-hero.jpg" alt="" />
-            <div className='banner-info'>
-              <h1><HiOutlineMusicNote />Karaoke Jam</h1>
-              <p>Reserve sua sala de Karaokê dos sonhos e cante como uma estrela</p>
-              <div className='btns-banner'>
-                <a href="#">
-                  <IoMicOutline/>
-                  Começar agora
-                </a>
-                {/* trocar para NavLink quando tiver a pagina de salas e login,
+          <img src="/assets/karaoke-hero.jpg" alt="" />
+          <div className='banner-info'>
+            <h1><HiOutlineMusicNote />Karaoke Jam</h1>
+            <p>Reserve sua sala de Karaokê dos sonhos e cante como uma estrela</p>
+            <div className='btns-banner'>
+              <a href="#">
+                <IoMicOutline />
+                Começar agora
+              </a>
+              {/* trocar para NavLink quando tiver a pagina de salas e login,
                 redireciona para login se não estiver logado, vai para as salas se estiver logado */}
-                <button className='link'>Ver Salas</button>
-              </div>
+              <button className='link'>Ver Salas</button>
             </div>
+          </div>
         </section>
         <section className='container-info'>
           {/* cards */}
           <div className='info'>
-                  <h1>Experiência Premium</h1>
-                  <p>Salas equipadas com a melhor tecnologia para sua performance</p>
+            <h1>Experiência Premium</h1>
+            <p>Salas equipadas com a melhor tecnologia para sua performance</p>
           </div>
           <div className='cards'>
-              <Card infos={card1}/>
-              <Card infos={card2}/>
-              <Card infos={card3}/>
+            <Card infos={card1} />
+            <Card infos={card2} />
+            <Card infos={card3} />
           </div>
         </section>
         <section className='container-confirm'>
-                  <h2>Pronto para brilhar no palco?</h2>
-                  <p>Crie sua conta e reserve sua primeira sala em minutos</p>
-                  
+          <h2>Pronto para brilhar no palco?</h2>
+          <p>Crie sua conta e reserve sua primeira sala em minutos</p>
+          <NavLink to='/login'>
+                <IoMicOutline/>
+                Criar conta grátis
+          </NavLink>
         </section>
       </main>
+      <Footer/>
     </>
   )
 }
