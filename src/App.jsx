@@ -39,7 +39,7 @@ function App() {
             <h1><HiOutlineMusicNote />Karaoke Jam</h1>
             <p>Reserve sua sala de Karaokê dos sonhos e cante como uma estrela</p>
             <div className='btns-banner'>
-              <a href="#">
+              <a href="#container-confirm">
                 <IoMicOutline />
                 Começar agora
               </a>
@@ -61,10 +61,10 @@ function App() {
             <Card infos={card3} />
           </div>
         </section>
-        <section className='container-confirm'>
+        <section id='container-confirm' className='container-confirm'>
           <h2>Pronto para brilhar no palco?</h2>
           <p>Crie sua conta e reserve sua primeira sala em minutos</p>
-          <NavLink to='/login'>
+          <NavLink to='/auth'>
                 <IoMicOutline/>
                 Criar conta grátis
           </NavLink>
